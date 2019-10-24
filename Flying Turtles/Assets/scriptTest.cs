@@ -9,7 +9,7 @@ public class scriptTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hewwo!");
+       
     }
 
     // Update is called once per frame
@@ -22,11 +22,33 @@ public class scriptTest : MonoBehaviour
 			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 			
 			if(hit.collider != null){
-				Debug.Log("Clicked " + hit.collider.gameObject.name);
-				if(hit.collider.gameObject.GetComponent<Renderer>().material.color != Color.red)
-					hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
-				else
-					hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.white;
+				
+				switch(hit.collider.gameObject.GetComponent<ClickID>().ID){
+					
+				case 0:
+					Debug.Log("Clicked " + hit.collider.gameObject.name);
+					if(hit.collider.gameObject.GetComponent<Renderer>().material.color != Color.red)
+						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
+					else
+						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.white;
+					
+					
+					break;
+				
+				case 1:
+					Debug.Log("Clicked " + hit.collider.gameObject.name);
+					if(hit.collider.gameObject.GetComponent<Renderer>().material.color != Color.green)
+						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.green;
+					else
+						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.white;
+					break;
+					
+				}
+			}
+			else{
+				GameObject.Find("moveable").GetComponent<basicMovement>().destination = mousePos2D;
+				
+				
 			}
 			
         }
