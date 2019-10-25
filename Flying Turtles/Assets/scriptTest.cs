@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scriptTest : MonoBehaviour
 {
-	
+	RaycastHit2D hit;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class scriptTest : MonoBehaviour
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 			
-			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+			hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 			
 			if(hit.collider != null){
 				
@@ -27,9 +27,12 @@ public class scriptTest : MonoBehaviour
 					
 				case 0:
 					Debug.Log("Clicked " + hit.collider.gameObject.name);
+					if(keyValid())
 					if(hit.collider.gameObject.GetComponent<Renderer>().material.color != Color.red)
+						
 						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
 					else
+						
 						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.white;
 					
 					
@@ -53,6 +56,23 @@ public class scriptTest : MonoBehaviour
 			
         }
     }
+	
+	bool keyValid(){
+		GameObject handle = GameObject.Find("moveable");
+		lockObject L = hit.collider.gameObject.GetComponent<lockObject>();
+		keyObject K = handle.GetComponent<keyObject>();
+		
+		
+		
+		if(L != null & K != null){
+			if(L.validate(K)){
+				return true;
+			
+			}
+			
+		}
+		return false;
+	}
 	
 
 	

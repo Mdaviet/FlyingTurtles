@@ -7,14 +7,16 @@ public class basicMovement : MonoBehaviour
 {
 	
 	public Vector2 destination;
-	public float speed = 1;
+	public float speed = 1.0f;
+	public float tolerance = 0.05f;
 	Vector2 currentPos;
 	Vector3 go;
 	float distanceY;
 	float distanceX;
 	float angle;
-	public float XRatio;
-	public float YRatio;
+	float XRatio;
+	float YRatio;
+	
 	
 	
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class basicMovement : MonoBehaviour
 		XRatio = Mathf.Cos(angle);
 		YRatio = Mathf.Sin(angle);
 		Vector3 go = new Vector3(XRatio, YRatio, 0);
-		if((Mathf.Abs(distanceY) >= 0.05f) & (Mathf.Abs(distanceX) >= 0.05f)){
+		if((Mathf.Abs(distanceY) >= tolerance) & (Mathf.Abs(distanceX) >= tolerance)){
 			
 				
 				

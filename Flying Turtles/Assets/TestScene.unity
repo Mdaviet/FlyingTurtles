@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 370514404}
   - component: {fileID: 370514406}
   - component: {fileID: 370514407}
+  - component: {fileID: 370514408}
   m_Layer: 0
   m_Name: testObject2
   m_TagString: Untagged
@@ -284,6 +285,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+--- !u!114 &370514408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370514403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5938e0878ad494f95c1a4cb57bb9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach: 0
+  sharp: 0
+  flame: 0
+  wood: 0
+  power: 0
 --- !u!1 &483419607
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +315,7 @@ GameObject:
   - component: {fileID: 483419610}
   - component: {fileID: 483419609}
   - component: {fileID: 483419608}
+  - component: {fileID: 483419613}
   m_Layer: 0
   m_Name: moveable
   m_TagString: Untagged
@@ -316,10 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b3b11e2079a524db5440aaad02625c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {x: 7.72, y: 2.5}
+  destination: {x: -7.67, y: 0}
   speed: 5
-  XRatio: 0
-  YRatio: 0
+  tolerance: 0.03
 --- !u!114 &483419609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +430,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483419613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483419607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e811a809b40ab2a41a697a8cfc777723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach: 0
+  sharp: 0
+  flame: 0
+  wood: 0
+  power: 0
 --- !u!1 &584607287
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +542,7 @@ GameObject:
   - component: {fileID: 1712864649}
   - component: {fileID: 1712864651}
   - component: {fileID: 1712864652}
+  - component: {fileID: 1712864653}
   m_Layer: 0
   m_Name: testObject3
   m_TagString: Untagged
@@ -606,6 +642,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+--- !u!114 &1712864653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712864648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5938e0878ad494f95c1a4cb57bb9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach: 0
+  sharp: 0
+  flame: 2
+  wood: 0
+  power: 1
 --- !u!1 &2044276254
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +671,7 @@ GameObject:
   - component: {fileID: 2044276255}
   - component: {fileID: 2044276257}
   - component: {fileID: 2044276258}
+  - component: {fileID: 2044276259}
   m_Layer: 0
   m_Name: testObject1
   m_TagString: Untagged
@@ -717,3 +771,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+--- !u!114 &2044276259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044276254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5938e0878ad494f95c1a4cb57bb9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach: 0
+  sharp: 0
+  flame: 0
+  wood: 0
+  power: 0
