@@ -31,17 +31,17 @@ public class lockObject : MonoBehaviour
 		bool result = true;
 		
 		if(key.reach < reach)
-			result = false;
+			return false;
 		if(key.sharp < sharp)
-			result = false;
+			rreturn false;
 		if(key.flame < flame)
-			result = false;
+			return false;
 		if(key.wood < wood)
-			result = false;
+			return false;
 		if(key.power < power)
-			result = false;
+			return false;
 		
-		return result;
+		
 		
 		
 		
