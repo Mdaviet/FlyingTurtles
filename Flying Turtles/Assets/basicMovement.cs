@@ -42,7 +42,7 @@ public class basicMovement : MonoBehaviour
 		XRatio = Mathf.Cos(angle);
 		YRatio = Mathf.Sin(angle);
 		Vector3 go = new Vector3(XRatio, YRatio, 0);
-		if((Mathf.Abs(distanceY) >= tolerance) & (Mathf.Abs(distanceX) >= tolerance)){
+		if((Mathf.Abs(distanceY) >= tolerance) || (Mathf.Abs(distanceX) >= tolerance)){
 			
 				
 				

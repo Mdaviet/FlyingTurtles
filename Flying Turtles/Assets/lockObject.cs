@@ -28,7 +28,6 @@ public class lockObject : MonoBehaviour
 	
 	public bool validate(keyObject key){
 		
-		bool result = true;
 		
 		if(key.reach < reach)
 			return false;
@@ -40,6 +39,8 @@ public class lockObject : MonoBehaviour
 			return false;
 		if(key.power < power)
 			return false;
+		
+		return true;
 		
 		
 		
