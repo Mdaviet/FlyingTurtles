@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class PlayerMoveScript : MonoBehaviour
+public class EnemyMoveScript : MonoBehaviour
 {
-	
-	public Vector2 destination;
-	public Vector2 currentPos;
-	float distanceY;
-	float distanceX;
+   
+    public Vector2 destination;
+	Vector2 currentPos;
+	public float distanceY;
+	public float distanceX;
 	float angle;
 	public Vector2 ratio;
 	float XRatio;
@@ -17,45 +16,39 @@ public class PlayerMoveScript : MonoBehaviour
 	
 	public float momentumX;
 	public float momentumY;
+	float totalMomentum;
 	public float acceleration = 0.1f;
 	public float accelCap = 5.0f;
-	
-
-	
-    // Start is called before the first frame update
+   
+   
     void Start()
     {
-		//destination = new Vector2(3.0f, 2.5f);
-		destination = GameObject.Find("MouseHelper").GetComponent<MouseHelperScript>().mousePos2D;
+		destination = GameObject.Find("Player").GetComponent<PlayerMoveScript>().currentPos;
         currentPos = new Vector2(transform.position.x, transform.position.y);
 		distanceX = destination.x - currentPos.x;
 		distanceY = destination.y - currentPos.y;
 		angle = Mathf.Atan2(distanceY , distanceX);
 		Debug.Log(angle);
-		
-		
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-		destination = GameObject.Find("MouseHelper").GetComponent<MouseHelperScript>().mousePos2D;
-		KeyBoardHelperScript kbh = GameObject.Find("KeyBoardHelper").GetComponent<KeyBoardHelperScript>();
-		currentPos = new Vector2(transform.position.x, transform.position.y);
+		destination = GameObject.Find("Player").GetComponent<PlayerMoveScript>().currentPos;
+        currentPos = new Vector2(transform.position.x, transform.position.y);
 		distanceX = destination.x - currentPos.x;
 		distanceY = destination.y - currentPos.y;
 		angle = Mathf.Atan2(distanceY , distanceX);
-		angle = angle * (180.0f/Mathf.PI);
+        angle = angle * (180.0f/Mathf.PI);
 		ratio.x = Mathf.Cos(angle* (Mathf.PI/180.0f));
 		ratio.y = Mathf.Sin(angle* (Mathf.PI/180.0f));
+		totalMomentum = Mathf.Sqrt((momentumX*momentumX) + (momentumY*momentumY));
 		
 		transform.eulerAngles = new Vector3(0.0f, 0.0f, angle);
 		
 		
-		//Right Movement
-
-		
-		if(kbh.rightKeyHeld){
+		if(distanceX > 0){
 			
 			if(momentumX < accelCap){
 					momentumX = momentumX + acceleration * Time.deltaTime;
@@ -71,7 +64,7 @@ public class PlayerMoveScript : MonoBehaviour
 		
 		//Left Movement
 
-		if(kbh.leftKeyHeld){
+		if(distanceX < 0){
 			
 			if(-momentumX < accelCap){
 					momentumX = momentumX - acceleration * Time.deltaTime;
@@ -85,7 +78,7 @@ public class PlayerMoveScript : MonoBehaviour
 		
 		}
 		
-		if(kbh.upKeyHeld){
+		if(distanceY > 0){
 			
 			if(momentumY < accelCap){
 					momentumY = momentumY + acceleration * Time.deltaTime;
@@ -99,7 +92,7 @@ public class PlayerMoveScript : MonoBehaviour
 		
 		}
 		
-		if(kbh.downKeyHeld){
+		if(distanceY < 0){
 			
 			if(-momentumY < accelCap){
 					momentumY = momentumY - acceleration * Time.deltaTime;
@@ -114,17 +107,11 @@ public class PlayerMoveScript : MonoBehaviour
 		}
 		
 		
-		
-		
-		
 		transform.Translate(new Vector3(1.0f, 0.0f, 0.0f) * momentumX * Time.deltaTime, Space.World);
 		transform.Translate(new Vector3(0.0f, 1.0f, 0.0f) * momentumY * Time.deltaTime, Space.World);
 		
 		
-			
-        
+		
+		
     }
-
-	
-	
 }

@@ -9,6 +9,7 @@ public class BlastScript : MonoBehaviour
 	private float flashInterval = 0.5f;
 	private float timer = 0.0f;
 	public int frame = 0;
+
 	
     // Start is called before the first frame update
     void Start()
