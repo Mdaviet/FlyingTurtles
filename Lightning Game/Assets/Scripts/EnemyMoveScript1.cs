@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveScript : MonoBehaviour
+public class EnemyMoveScript1 : MonoBehaviour
 {
    
     public Vector2 destination;
