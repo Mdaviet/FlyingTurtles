@@ -133,6 +133,9 @@ public class EnemyMoveScript2 : MonoBehaviour
 			
 		}
 		
+		
+			
+		
 	
 		transform.Translate(new Vector3(1.0f, 0.0f, 0.0f) * momentumX * Time.deltaTime, Space.World);
 		transform.Translate(new Vector3(0.0f, 1.0f, 0.0f) * momentumY * Time.deltaTime, Space.World);

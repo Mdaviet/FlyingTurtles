@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlastScript : MonoBehaviour
+public class EnemyBlastScript : MonoBehaviour
 {
 	
 	public int damage = 1;
 	private float flashInterval = 0.5f;
 	private float timer = 0.0f;
 	public int frame = 0;
-	bool fromEnemy = false;
+	bool fromEnemy = true;
 
 	
     // Start is called before the first frame update
