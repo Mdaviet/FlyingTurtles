@@ -5,12 +5,14 @@ using UnityEngine;
 public class EnemyWeaponScript : MonoBehaviour
 {
 	  public Transform BlastPrefab;
-	  public float shotInterval = 1.0f;
+	  public float shotInterval;
 	  float cooldown = 0.0f;
 
     // Update is called once per frame
 	
-
+	void Start(){
+		shotInterval = GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().fireRate;
+	}
 	
     void Update()
     {
@@ -20,7 +22,7 @@ public class EnemyWeaponScript : MonoBehaviour
 		
 		if(cooldown == shotInterval && parent.inPlace){
 			Fire();
-			
+			GameObject.Find("SoundFX").GetComponent<SoundFXHelperScript>().EnemyShotSound();
 			
 			cooldown = 0.0f;
 			

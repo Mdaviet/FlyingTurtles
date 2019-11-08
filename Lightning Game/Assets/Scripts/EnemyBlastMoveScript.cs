@@ -12,7 +12,7 @@ public class EnemyBlastMoveScript : MonoBehaviour
     void Start()
     {
 		
-		angle = transform.parent.gameObject.GetComponent<EnemyMoveScript2>().ratio;
+		//angle = transform.parent.gameObject.GetComponent<EnemyMoveScript2>().ratio;
 		
 		
         

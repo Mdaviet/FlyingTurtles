@@ -18,12 +18,14 @@ public class EnemyMoveScript2 : MonoBehaviour
 	public float momentumX;
 	public float momentumY;
 	float totalMomentum;
-	public float acceleration = 0.1f;
-	public float accelCap = 5.0f;
+	public float acceleration;
+	public float accelCap;
    
    
     void Start()
     {
+		acceleration = GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().speed;
+		accelCap = GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().speed;
 		destination = destination = GameObject.Find("Player").GetComponent<PlayerMoveScript>().currentPos;
         currentPos = new Vector2(transform.position.x, transform.position.y);
 		distanceX = destination.x - currentPos.x;

@@ -14,6 +14,7 @@ public class SpawnHelperScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		spawnRate = GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().spawnRate;
 		spawnerCount = transform.childCount;
 		children = GameObject.FindGameObjectsWithTag("Spawner");
         

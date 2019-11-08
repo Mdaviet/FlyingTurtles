@@ -15,7 +15,6 @@ public class HealthScript : MonoBehaviour
 	   
 	   BlastScript blast = collider.gameObject.GetComponent<BlastScript>();
 	   EnemyBlastScript blast2 = collider.gameObject.GetComponent<EnemyBlastScript>();
-	   Debug.Log("I'm hit!");
 	   
 	   if(blast != null && isEnemy){
 		   
@@ -23,6 +22,10 @@ public class HealthScript : MonoBehaviour
 		   Destroy(blast.gameObject);
 		   
 		   if(hp <= 0){
+			   GameObject.Find("SoundFX").GetComponent<SoundFXHelperScript>().EnemyDeathSound();
+
+			   GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().enemiesKilled++;
+			   GameObject.Find("DifficultyController").GetComponent<DifficultyControllerScript>().onKill();
 			   Destroy(gameObject);
 		   }
 	   }

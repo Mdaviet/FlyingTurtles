@@ -11,13 +11,14 @@ public class SpawnerScript : MonoBehaviour
 	private Vector2 topRightCorner;
 	private Vector2 bottomLeftCorner;
 	private Vector2 bottomRightCorner;
-	public float spawnRate = 1.0f;
+	public float spawnRate;
 	private float timer = 0.0f;
 	public float timerOffset = 0.0f;
 	
     // Start is called before the first frame update
     void Start()
     {
+		
 		timer = timerOffset;
 		topLeftCorner = new Vector2(  transform.position.x - width/2  ,  transform.position.y + height/2  );
 		topRightCorner = new Vector2(  transform.position.x + width/2  ,  transform.position.y + height/2  );
