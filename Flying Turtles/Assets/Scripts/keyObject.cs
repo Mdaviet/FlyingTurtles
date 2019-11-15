@@ -10,6 +10,8 @@ public class keyObject : MonoBehaviour
 	public int flame;
 	public int wood;
 	public int power;
+
+	
 	
 	public keyObject(){
 		reach = 0;
@@ -17,7 +19,7 @@ public class keyObject : MonoBehaviour
 		flame = 0;
 		wood = 0;
 		power = 0;
-		
+
 		
 	}
 

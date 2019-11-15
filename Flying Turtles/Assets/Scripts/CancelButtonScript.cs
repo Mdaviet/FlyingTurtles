@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickID : MonoBehaviour
+public class CancelButtonScript : MonoBehaviour
 {
+ public GameObject parent;
+	
     // Start is called before the first frame update
-	public int ID;
     void Start()
     {
-        Debug.Log("Testing");
+        parent = gameObject.transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -16,4 +17,9 @@ public class ClickID : MonoBehaviour
     {
         
     }
+	
+	public void onClick(){
+		parent.GetComponent<ContextMenuScript>().Deactivate();
+		
+	}
 }
