@@ -5,11 +5,13 @@ using UnityEngine;
 public class PickUpButtonScript : MonoBehaviour
 {
 	public GameObject parent;
+	InventoryManagerScript Inventory;
 	
     // Start is called before the first frame update
     void Start()
     {
         parent = gameObject.transform.parent.gameObject;
+		Inventory = GameObject.Find("InventoryManager").GetComponent<InventoryManagerScript>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,17 @@ public class PickUpButtonScript : MonoBehaviour
     }
 	
 	public void onClick(){
+		GameObject item = parent.GetComponent<ContextMenuScript>().attachedItem;
+		if(!Inventory.addItem(item)){
+			GameObject.Find("InspectMessage").GetComponent<InspectMessageScript>().UpdateMessage("Too many items in inventory");
+			return;
+		}
+		
+		//transform.position = new Vector3(100.0f, 100.0f, 0.0f);
+		item.transform.position = new Vector3(100.0f, 100.0f, 0.0f);
+		item.GetComponent<ItemScript>().inInv = true;
+		
+		
 		parent.GetComponent<ContextMenuScript>().Deactivate();
 		
 	}

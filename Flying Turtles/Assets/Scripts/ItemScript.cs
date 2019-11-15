@@ -11,12 +11,13 @@ public class ItemScript : MonoBehaviour
 	public int wood = 0;
 	public int power = 0;
 	public string message = "default";
-	
+	Vector3 origPos;
+	public bool inInv = false;	
 	
 	// Start is called before the first frame update
     void Start()
     {
-		
+		origPos = transform.position;
         
     }
 
