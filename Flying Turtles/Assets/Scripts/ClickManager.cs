@@ -31,7 +31,7 @@ public class ClickManager : MonoBehaviour
 				if(!CM.isActive && hit.collider.gameObject.GetComponent<ItemScript>() != null){
 					CM.Activate(hit.collider.gameObject);
 				}
-				else if(CM.isActive && CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject && hit.collider.gameObject.tag != "Button"){
+				else if(CM.isActive && CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject && hit.collider.gameObject.tag != "Button" && hit.collider.gameObject.GetComponent<ItemScript>() != null){
 					CM.Deactivate();
 					CM.Activate(hit.collider.gameObject);
 					
@@ -39,7 +39,7 @@ public class ClickManager : MonoBehaviour
 				if(!CM2.isActive && hit.collider.gameObject.GetComponent<lockObject>() != null){
 					CM2.Activate(hit.collider.gameObject);
 				}
-				else if(CM2.isActive && CM2.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu2").gameObject && hit.collider.gameObject.tag != "Button2"){
+				else if(CM2.isActive && CM2.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu2").gameObject && hit.collider.gameObject.tag != "Button2" && hit.collider.gameObject.GetComponent<lockObject>() != null){
 					CM2.Deactivate();
 					CM2.Activate(hit.collider.gameObject);
 					
