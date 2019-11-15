@@ -33,6 +33,7 @@ public class InspectMessageScript : MonoBehaviour
 	public void UpdateMessage(string message){
 		active = true;
 		MyText.text = message;
+		timer = 0.0f;
 		
 		
 		

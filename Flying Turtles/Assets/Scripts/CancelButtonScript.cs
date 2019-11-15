@@ -19,7 +19,10 @@ public class CancelButtonScript : MonoBehaviour
     }
 	
 	public void onClick(){
-		parent.GetComponent<ContextMenuScript>().Deactivate();
+		if(parent.GetComponent<ContextMenuScript>() != null)
+			parent.GetComponent<ContextMenuScript>().Deactivate();
 		
+		if(parent.GetComponent<ContextMenuScript2>() != null)
+			parent.GetComponent<ContextMenuScript2>().Deactivate();
 	}
 }

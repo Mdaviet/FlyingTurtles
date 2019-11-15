@@ -16,6 +16,7 @@ public class basicMovement : MonoBehaviour
 	float angle;
 	float XRatio;
 	float YRatio;
+
 	
 	
 	
@@ -65,6 +66,6 @@ public class basicMovement : MonoBehaviour
         
     }
 
-	
+
 	
 }

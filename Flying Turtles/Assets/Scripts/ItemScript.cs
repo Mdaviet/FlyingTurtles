@@ -26,4 +26,9 @@ public class ItemScript : MonoBehaviour
     {
         
     }
+	
+	public void Return(){
+		
+		transform.position = origPos;
+	}
 }

@@ -10,7 +10,9 @@ public class lockObject : MonoBehaviour
 	public int flame;
 	public int wood;
 	public int power;
-
+	public string message = "default";
+	public string useSuccsess = "default";
+	public string useFail = "default";
 	
 
 	
@@ -25,6 +27,9 @@ public class lockObject : MonoBehaviour
 		
 		
 	}
+	
+
+	
 	
 	public bool validate(keyObject key){
 		

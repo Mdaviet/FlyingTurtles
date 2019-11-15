@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scriptTest : MonoBehaviour
+public class ClickManager : MonoBehaviour
 {
 	RaycastHit2D hit;
 	ContextMenuScript CM;
+	ContextMenuScript2 CM2;
 
     // Start is called before the first frame update
     void Start()
     {
        CM = GameObject.Find("ContextMenu").gameObject.GetComponent<ContextMenuScript>();
+	   CM2 = GameObject.Find("ContextMenu2").gameObject.GetComponent<ContextMenuScript2>();
     }
 
     // Update is called once per frame
@@ -26,14 +28,24 @@ public class scriptTest : MonoBehaviour
 				
 				Debug.Log(hit.collider.name);
 				
-				if(!CM.isActive){
+				if(!CM.isActive && hit.collider.gameObject.GetComponent<ItemScript>() != null){
 					CM.Activate(hit.collider.gameObject);
 				}
-				else if(CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject && hit.collider.gameObject.tag != "Button"){
+				else if(CM.isActive && CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject && hit.collider.gameObject.tag != "Button"){
 					CM.Deactivate();
 					CM.Activate(hit.collider.gameObject);
 					
 				}
+				if(!CM2.isActive && hit.collider.gameObject.GetComponent<lockObject>() != null){
+					CM2.Activate(hit.collider.gameObject);
+				}
+				else if(CM2.isActive && CM2.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu2").gameObject && hit.collider.gameObject.tag != "Button2"){
+					CM2.Deactivate();
+					CM2.Activate(hit.collider.gameObject);
+					
+				}
+				
+			
 				
 				
 				switch(hit.collider.gameObject.GetComponent<ClickID>().ID){
@@ -51,9 +63,11 @@ public class scriptTest : MonoBehaviour
 				case "cancel":
 				
 					hit.collider.gameObject.GetComponent<CancelButtonScript>().onClick();
-				
+					
 					break;
-				
+				case "use":
+					hit.collider.gameObject.GetComponent<UseButtonScript>().onClick();
+					break;
 					
 				case "test1":
 					Debug.Log("Clicked " + hit.collider.gameObject.name);
@@ -77,16 +91,16 @@ public class scriptTest : MonoBehaviour
 					else
 						hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.white;
 					break;
+				case "background":
+					GameObject.Find("moveable").GetComponent<basicMovement>().destination = mousePos2D;
+					CM.Deactivate();
+					break;
 				
 				case "default":
 					break;
 				}
 			}
-			else{
-				GameObject.Find("moveable").GetComponent<basicMovement>().destination = mousePos2D;
-				CM.Deactivate();
-				
-			}
+		
 			
         }
     }
