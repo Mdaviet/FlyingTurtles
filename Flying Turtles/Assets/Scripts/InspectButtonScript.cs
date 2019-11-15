@@ -7,6 +7,9 @@ public class InspectButtonScript : MonoBehaviour
  public GameObject parent;
 	
     // Start is called before the first frame update
+	public ItemScript item;
+
+	
     void Start()
     {
         parent = gameObject.transform.parent.gameObject;
@@ -20,7 +23,7 @@ public class InspectButtonScript : MonoBehaviour
 	
 	public void onClick(){
 		
-		ItemScript item = parent.GetComponent<ContextMenuScript>().attachedItem.GetComponent<ItemScript>();
+		item = parent.GetComponent<ContextMenuScript>().attachedItem.GetComponent<ItemScript>();
 		string msg = "This object has no message";
 		
 		if(item != null){

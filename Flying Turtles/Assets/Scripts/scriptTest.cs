@@ -29,7 +29,7 @@ public class scriptTest : MonoBehaviour
 				if(!CM.isActive){
 					CM.Activate(hit.collider.gameObject);
 				}
-				else if(CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject){
+				else if(CM.attachedItem != hit.collider.gameObject && hit.collider.gameObject != GameObject.Find("ContextMenu").gameObject && hit.collider.gameObject.tag != "Button"){
 					CM.Deactivate();
 					CM.Activate(hit.collider.gameObject);
 					
