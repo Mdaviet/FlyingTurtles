@@ -70,13 +70,17 @@ public class InventoryManagerScript : MonoBehaviour
 			
 			key.reach += item.GetComponent<ItemScript>().reach;
 			key.sharp += item.GetComponent<ItemScript>().sharp;
-			key.flame += item.GetComponent<ItemScript>().flame;
-			key.wood += item.GetComponent<ItemScript>().wood;
+            key.bright += item.GetComponent<ItemScript>().bright;
+            key.flat += item.GetComponent<ItemScript>().flat;
+            key.flame += item.GetComponent<ItemScript>().flame;
+            key.blunt += item.GetComponent<ItemScript>().blunt;
+            key.buoyant += item.GetComponent<ItemScript>().buoyant;
 			key.power += item.GetComponent<ItemScript>().power;
-			
-			
-			
-		}
+            key.climb += item.GetComponent<ItemScript>().climb;
+            key.heavy += item.GetComponent<ItemScript>().heavy;
+            key.dexterous += item.GetComponent<ItemScript>().dexterous;
+
+        }
 		else{
 			return false;
 		}
@@ -90,15 +94,21 @@ public class InventoryManagerScript : MonoBehaviour
 			Ui[j].GetComponent<Image>().sprite = null;
 			Ui[j].GetComponent<Image>().color = clear;
 			i[j].GetComponent<ItemScript>().Return();
-			
-			key.reach -= i[j].GetComponent<ItemScript>().reach;
-			key.sharp -= i[j].GetComponent<ItemScript>().sharp;
-			key.flame -= i[j].GetComponent<ItemScript>().flame;
-			key.wood -= i[j].GetComponent<ItemScript>().wood;
-			key.power -= i[j].GetComponent<ItemScript>().power;
-			
-			
-			i[j] = null;
+
+            key.reach -= i[j].GetComponent<ItemScript>().reach;
+            key.sharp -= i[j].GetComponent<ItemScript>().sharp;
+            key.bright -= i[j].GetComponent<ItemScript>().bright;
+            key.flat -= i[j].GetComponent<ItemScript>().flat;
+            key.flame -= i[j].GetComponent<ItemScript>().flame;
+            key.blunt -= i[j].GetComponent<ItemScript>().blunt;
+            key.buoyant -= i[j].GetComponent<ItemScript>().buoyant;
+            key.power -= i[j].GetComponent<ItemScript>().power;
+            key.climb -= i[j].GetComponent<ItemScript>().climb;
+            key.heavy -= i[j].GetComponent<ItemScript>().heavy;
+            key.dexterous -= i[j].GetComponent<ItemScript>().dexterous;
+
+
+            i[j] = null;
 			totalItems--;
 			
 			

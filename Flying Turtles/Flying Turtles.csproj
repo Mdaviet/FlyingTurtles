@@ -622,17 +622,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BarriarScript.cs" />
     <Compile Include="Assets\Scripts\basicMovement.cs" />
     <Compile Include="Assets\Scripts\CancelButtonScript.cs" />
     <Compile Include="Assets\Scripts\ClickID.cs" />
+    <Compile Include="Assets\Scripts\ClickManager.cs" />
     <Compile Include="Assets\Scripts\ContextMenuScript.cs" />
+    <Compile Include="Assets\Scripts\ContextMenuScript2.cs" />
     <Compile Include="Assets\Scripts\InspectButtonScript.cs" />
     <Compile Include="Assets\Scripts\InspectMessageScript.cs" />
+    <Compile Include="Assets\Scripts\InventoryManagerScript.cs" />
     <Compile Include="Assets\Scripts\ItemScript.cs" />
     <Compile Include="Assets\Scripts\keyObject.cs" />
     <Compile Include="Assets\Scripts\lockObject.cs" />
     <Compile Include="Assets\Scripts\PickUpButtonScript.cs" />
     <Compile Include="Assets\Scripts\scriptTest.cs" />
+    <Compile Include="Assets\Scripts\UIItemScript.cs" />
+    <Compile Include="Assets\Scripts\UseButtonScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\PolygonChangeShapeWindow.uxml" />
