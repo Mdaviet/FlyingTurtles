@@ -19,6 +19,8 @@ public class lockObject : MonoBehaviour
     public string message = "default";
 	public string useSuccsess = "default";
 	public string useFail = "default";
+	public bool activated = false;
+
 	
 
 	
@@ -35,8 +37,13 @@ public class lockObject : MonoBehaviour
         dexterous = 0;
     }
 	
-
+	public void Activate(){
+		
+		activated = true;
+	}
 	
+	
+
 	
 	public bool validate(keyObject key){
 		

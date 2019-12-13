@@ -97,6 +97,7 @@ public class ClickManager : MonoBehaviour
 					break;
 				
 				case "default":
+					Debug.Log("Didn't click anything");
 					break;
 				}
 			}

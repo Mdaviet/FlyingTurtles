@@ -26,8 +26,12 @@ public class ContextMenuScript : MonoBehaviour
     }
 	
 	public void Activate(GameObject obj){
+		
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		gameObject.transform.position = new Vector3(mousePos.x + MouseOffset.x, mousePos.y + MouseOffset.y, -5.0f);
+		if(gameObject.transform.position.y < -3.0f){
+			gameObject.transform.position = new Vector3(mousePos.x + MouseOffset.x, mousePos.y + MouseOffset.y + 2.0f, -5.0f);
+		}
 		attachedItem = obj;
 		isActive = true;
 	}

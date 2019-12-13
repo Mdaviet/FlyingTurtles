@@ -21,18 +21,30 @@ public class PickUpButtonScript : MonoBehaviour
     }
 	
 	public void onClick(){
+	
 		GameObject item = parent.GetComponent<ContextMenuScript>().attachedItem;
-		if(!Inventory.addItem(item)){
-			GameObject.Find("InspectMessage").GetComponent<InspectMessageScript>().UpdateMessage("Too many items in inventory");
-			return;
-		}
-		
-		//transform.position = new Vector3(100.0f, 100.0f, 0.0f);
-		item.transform.position = new Vector3(100.0f, 100.0f, 0.0f);
-		item.GetComponent<ItemScript>().inInv = true;
-		
-		
-		parent.GetComponent<ContextMenuScript>().Deactivate();
+		bool hasDepend = item.GetComponent<ItemScript>().depend != null;
+	
+		if(!hasDepend || item.GetComponent<ItemScript>().depend.GetComponent<lockObject>().activated){
+			if(!Inventory.addItem(item)){
+					GameObject.Find("InspectMessage").GetComponent<InspectMessageScript>().UpdateMessage("Too many items in inventory");
+					return;
+				}
+				
+				//transform.position = new Vector3(100.0f, 100.0f, 0.0f);
+				item.transform.position = new Vector3(100.0f, 100.0f, 0.0f);
+				item.GetComponent<ItemScript>().inInv = true;
+				
+				
+				parent.GetComponent<ContextMenuScript>().Deactivate();
+					
+			}
+			else{
+				GameObject.Find("InspectMessage").GetComponent<InspectMessageScript>().UpdateMessage(item.GetComponent<ItemScript>().unavaliableMessage);
+				parent.GetComponent<ContextMenuScript>().Deactivate();
+				
+			}
+			
 		
 	}
 }

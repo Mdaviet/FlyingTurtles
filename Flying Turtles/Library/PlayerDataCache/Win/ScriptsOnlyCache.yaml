@@ -59,47 +59,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9720}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9766}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9842}
     - Class: 114
-      Script: {instanceID: 9876}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10144}
+      Script: {instanceID: 10150}
     - Class: 114
-      Script: {instanceID: 10192}
+      Script: {instanceID: 10198}
     - Class: 114
-      Script: {instanceID: 10278}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 10390}
+      Script: {instanceID: 10396}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10496}
+      Script: {instanceID: 10502}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10506}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10710}
     - Class: 114
-      Script: {instanceID: 10756}
+      Script: {instanceID: 10764}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 11010}
     - Class: 114
-      Script: {instanceID: 11134}
+      Script: {instanceID: 11142}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11364}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11520}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -372,6 +372,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scriptTest
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
@@ -627,14 +633,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: scriptTest
   platform: 5
   scenePathNames:
   - Assets/Scenes/Level 1.unity
-  playerPath: C:/Users/Micha/OneDrive/College/CS 477 Digital Game Design/Playtest
-    1/Flying Turtles.exe
+  playerPath: C:/Users/Garrett/Documents/CS477/FlyingTurtles/Flying Turtles/Builds/Flying
+    Turtles.exe

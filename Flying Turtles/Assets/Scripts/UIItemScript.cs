@@ -41,6 +41,7 @@ public class UIItemScript : MonoBehaviour, IPointerDownHandler, IPointerClickHan
 		
 		if(eventData.pointerCurrentRaycast.gameObject == Ui[0]){
 			GameObject.Find("InventoryManager").GetComponent<InventoryManagerScript>().removeItem(0);
+			Debug.Log("Help");
 		}
 		if(eventData.pointerCurrentRaycast.gameObject == Ui[1]){
 			GameObject.Find("InventoryManager").GetComponent<InventoryManagerScript>().removeItem(1);

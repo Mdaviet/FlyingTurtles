@@ -19,6 +19,9 @@ public class ItemScript : MonoBehaviour
 	public string message = "default";
 	Vector3 origPos;
 	public bool inInv = false;	
+	public bool avaliable = true;
+	public GameObject depend = null;
+	public string unavaliableMessage = "default";
 	
 	// Start is called before the first frame update
     void Start()
@@ -35,6 +38,7 @@ public class ItemScript : MonoBehaviour
 	
 	public void Return(){
 		
-		transform.position = origPos;
+		//transform.position = origPos;
+		  transform.position = GameObject.Find("moveable").transform.position;
 	}
 }
