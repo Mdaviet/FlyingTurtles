@@ -42,8 +42,12 @@ public keyObject key;
 				parent.GetComponent<ContextMenuScript2>().attachedItem.GetComponent<DisassembleScript>().CallItems();
 				parent.GetComponent<ContextMenuScript2>().attachedItem.transform.position = new Vector3(100f, 100f, 0f);
 				
-			}
 			
+				
+			}
+			if(parent.GetComponent<ContextMenuScript2>().attachedItem.GetComponent<WinStepScript>() != null){
+					parent.GetComponent<ContextMenuScript2>().attachedItem.GetComponent<WinStepScript>().Activate();
+				}
 			
 		}
 		else {

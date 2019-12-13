@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectPreserverScript : MonoBehaviour
 {
 	public GameObject player;
 	public GameObject Canvas;
 	public GameObject[] UIItems = new GameObject[4]; 
+	public GameObject[] pastItems = new GameObject[4];
 	public GameObject ClickManager;
 	public GameObject ConMenu1;
 	public GameObject ConMenu2;
@@ -47,15 +49,42 @@ public class ObjectPreserverScript : MonoBehaviour
 	public void PreserveItems(){
 		
 		GameObject[] items;
+		
+		
 		items	= GameObject.Find("InventoryManager").GetComponent<InventoryManagerScript>().i;
 		for(int i = 0; i < items.Length; i++){
 			if(items[i] != null){
 				DontDestroyOnLoad(items[i]);
+				items[i].gameObject.tag = "Untagged";
 			}
 		}
 		
 		
 	}
+	
+	public void UnPreserveItems(){
+		
+		GameObject[] items;
+		GameObject[] pastItems;
+		
+		GameObject newGO = new GameObject();
+		items	= GameObject.Find("InventoryManager").GetComponent<InventoryManagerScript>().i;
+		pastItems = GameObject.FindGameObjectsWithTag("DestroyOnLoad");
+		
+		for(int i = 0; i < pastItems.Length; i++){
+			Destroy(pastItems[i]);
+		}
+		
+		for(int i = 0; i < items.Length; i++){
+			if(items[i] != null){
+				items[i].gameObject.tag = "DestroyOnLoad";
+			}
+		}
+		
+		
+		
+	}
+	
 
     // Update is called once per frame
     void Update()

@@ -6,13 +6,17 @@ ScriptsOnlyBuild:
     - ClickManager
     - ContextMenuScript
     - ContextMenuScript2
+    - DisassembleScript
+    - ExitScript
     - InspectButtonScript
     - InspectMessageScript
     - InventoryManagerScript
     - ItemScript
+    - ObjectPreserverScript
     - PickUpButtonScript
     - UIItemScript
     - UseButtonScript
+    - WinStepScript
     - basicMovement
     - keyObject
     - lockObject
@@ -24,7 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -59,11 +62,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9676}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9726}
+      Script: {instanceID: 9704}
     - Class: 114
-      Script: {instanceID: 9766}
+      Script: {instanceID: 9722}
+    - Class: 114
+      Script: {instanceID: 9764}
+    - Class: 114
+      Script: {instanceID: 9774}
     - Class: 114
       Script: {instanceID: 9842}
     - Class: 114
@@ -71,35 +78,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10150}
     - Class: 114
-      Script: {instanceID: 10198}
+      Script: {instanceID: 10200}
     - Class: 114
-      Script: {instanceID: 10284}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10398}
-    - Class: 114
-      Script: {instanceID: 10502}
+      Script: {instanceID: 10402}
     - Class: 114
       Script: {instanceID: 10506}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10510}
     - Class: 114
-      Script: {instanceID: 10764}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 10768}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11014}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11520}
+      Script: {instanceID: 11504}
+    - Class: 114
+      Script: {instanceID: 11524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,6 +123,129 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Scenes/Level 2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9704}
+    - Class: 114
+      Script: {instanceID: 9764}
+    - Class: 114
+      Script: {instanceID: 10152}
+    - Class: 114
+      Script: {instanceID: 10200}
+    - Class: 114
+      Script: {instanceID: 10400}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/Level 3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9704}
+    - Class: 114
+      Script: {instanceID: 9764}
+    - Class: 114
+      Script: {instanceID: 10152}
+    - Class: 114
+      Script: {instanceID: 10200}
+    - Class: 114
+      Script: {instanceID: 10400}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/Level 4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9764}
+    - Class: 114
+      Script: {instanceID: 10152}
+    - Class: 114
+      Script: {instanceID: 10200}
+    - Class: 114
+      Script: {instanceID: 10226}
+    - Class: 114
+      Script: {instanceID: 10400}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -129,6 +259,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: af6930a3355e471f9746ef27a8a3675b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitScript
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -149,10 +285,22 @@ ScriptsOnlyBuild:
     className: UseButtonScript
   - hash:
       serializedVersion: 2
-      Hash: be5da6bcbc09e82de165ab1489f89060
+      Hash: 4367daca1cf775ab121580968f5c6211
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinScript
+  - hash:
+      serializedVersion: 2
+      Hash: 492337d96da82f81371d99525df09e10
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: lockObject
+  - hash:
+      serializedVersion: 2
+      Hash: 6752e415ef78c709ef94405e8a88bff2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectPreserverScript
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -281,6 +429,12 @@ ScriptsOnlyBuild:
     className: UIItemScript
   - hash:
       serializedVersion: 2
+      Hash: 0eb61d89375423b4ab0bff632478f9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisassembleScript
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -297,6 +451,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinStepScript
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -329,7 +489,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: b640b424a865e7577e1f4285219bda5c
+      Hash: 015b6f8611b53e03004ef6b97e1187c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemScript
@@ -636,5 +796,8 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Level 1.unity
+  - Assets/Scenes/Level 2.unity
+  - Assets/Scenes/Level 3.unity
+  - Assets/Scenes/Level 4.unity
   playerPath: C:/Users/Garrett/Documents/CS477/FlyingTurtles/Flying Turtles/Builds/Flying
     Turtles.exe

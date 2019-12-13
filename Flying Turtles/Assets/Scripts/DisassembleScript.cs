@@ -25,7 +25,7 @@ public class DisassembleScript : MonoBehaviour
 		if(comp1 != null)
 		comp1.transform.position = new Vector3(curpos.x + x1Off, curpos.y + y1Off, curpos.z);
 		if(comp2 != null)
-		comp2.transform.position = new Vector3(curpos.x+x2Off, curpos.y - y2Off, curpos.z);
+		comp2.transform.position = new Vector3(curpos.x+x2Off, curpos.y + y2Off, curpos.z);
 	}
 
     // Update is called once per frame

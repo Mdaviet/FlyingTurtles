@@ -22,6 +22,7 @@ public class ItemScript : MonoBehaviour
 	public bool avaliable = true;
 	public GameObject depend = null;
 	public string unavaliableMessage = "default";
+	public bool destroyOnLoad = false;
 	
 	// Start is called before the first frame update
     void Start()

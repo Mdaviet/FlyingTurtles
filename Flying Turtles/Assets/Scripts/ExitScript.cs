@@ -7,6 +7,7 @@ public class ExitScript : MonoBehaviour
 {
 	
 	public string nextScene;
+	bool firstTime = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class ExitScript : MonoBehaviour
 	public void Exit(){
 		GameObject.Find("ObjectPreserver").GetComponent<ObjectPreserverScript>().PreserveItems();
 		SceneManager.LoadScene(nextScene);
+		GameObject.Find("ObjectPreserver").GetComponent<ObjectPreserverScript>().UnPreserveItems();
 		
 	}
 	

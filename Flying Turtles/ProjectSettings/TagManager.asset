@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - Button2
+  - DestroyOnLoad
   layers:
   - Default
   - TransparentFX
