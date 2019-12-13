@@ -8,6 +8,11 @@ public class DisassembleScript : MonoBehaviour
 	public GameObject comp1;
 	public GameObject comp2;
 	
+	public float x1Off = 0.0f;
+	public float x2Off = 0.0f;
+	public float y1Off = 0.0f;
+	public float y2Off = 0.0f;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +22,10 @@ public class DisassembleScript : MonoBehaviour
 	
 	public void CallItems(){
 		Vector3 curpos = gameObject.transform.position;
-		comp1.transform.position = new Vector3(curpos.x-1.0f, curpos.y, curpos.z);
-		comp2.transform.position = new Vector3(curpos.x+1.0f, curpos.y, curpos.z);
+		if(comp1 != null)
+		comp1.transform.position = new Vector3(curpos.x + x1Off, curpos.y + y1Off, curpos.z);
+		if(comp2 != null)
+		comp2.transform.position = new Vector3(curpos.x+x2Off, curpos.y - y2Off, curpos.z);
 	}
 
     // Update is called once per frame

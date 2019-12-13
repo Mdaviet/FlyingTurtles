@@ -14,6 +14,7 @@ public class ObjectPreserverScript : MonoBehaviour
 	public GameObject InventoryManager;
 	public GameObject EventSystem;
 
+
 	
 	
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class ObjectPreserverScript : MonoBehaviour
 		EventSystem = GameObject.Find("EventSystem");
 	
 		InventoryManager = GameObject.Find("InventoryManager");
+		DontDestroyOnLoad(gameObject);
 		DontDestroyOnLoad(player);
 		DontDestroyOnLoad(Canvas);
 		DontDestroyOnLoad(ClickManager);
